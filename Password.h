@@ -2,8 +2,9 @@
 #define PASSWORD_H
 
 //complete the includes
-#include<ListArray.h>
-#include<Text.h>
+#include "ListArray.h"
+#include "Text.h"
+
 
 using namespace CSC2110;
 
@@ -19,6 +20,14 @@ class Password
 
    public:
 
+      Password();
+      ~Password();
+      void addWord(String* word);
+      void guess(int try_password, int num_matches);
+      int getNumberOfPasswordsLeft();
+      void displayViableWords();
+      int bestGuess();
+      String* getOriginalWord(int index);
 
 };
 

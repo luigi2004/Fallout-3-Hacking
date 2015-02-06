@@ -1,8 +1,13 @@
 #include "Password.h"
+#include "Keyboard.h"
+#include "ReadFile.h"
 //fill in includes, don't forget namespaces
+
+//Git repo: github.com/luigi2004/Fallout-3-Hacking
 
 #include <iostream>
 using namespace std;
+using namespace CSC2110;
 
 void addWords(Password* fh)
 {
@@ -34,9 +39,8 @@ void guessWords(Password* fh)
       int best_guess_index = fh->bestGuess();
 
       String* best_guess_word = fh->getOriginalWord(best_guess_index);
-      cout << "You should guess \"";
+      cout << "You should guess: ";
       best_guess_word->displayString();
-      cout << "\" at index " << best_guess_index;
       cout << endl << endl;
 
       String* guess_str = kb->readString("Index of word in the original word list to guess (1-based): ");
@@ -60,5 +64,5 @@ int main()
    Password* fallout = new Password();
    addWords(fallout);
    guessWords(fallout);
-   delete fallout;
+   //delete fallout;
 }
