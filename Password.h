@@ -2,8 +2,9 @@
 #define PASSWORD_H
 
 //complete the includes
-#include<ListArray.h>
-#include<Text.h>
+#include "ListArray.h"
+#include "Text.h"
+
 
 using namespace CSC2110;
 
@@ -19,6 +20,7 @@ class Password
       int getNumMatches(String* curr_word, String* word_guess);
 
    public:
+<<<<<<< HEAD
 	   Password();
 	   ~Password();
 	   void addWord(String* word);
@@ -27,6 +29,17 @@ class Password
 	   void displayViableWords();
 	   int bestGuess();
 	   String* getOriginalWord(int index);
+=======
+
+      Password();
+      ~Password();
+      void addWord(String* word);
+      void guess(int try_password, int num_matches);
+      int getNumberOfPasswordsLeft();
+      void displayViableWords();
+      int bestGuess();
+      String* getOriginalWord(int index);
+>>>>>>> 18f372864414b73fe845548384d8b8d72e202499
 
 };
 
