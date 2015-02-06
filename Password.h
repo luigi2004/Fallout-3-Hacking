@@ -7,6 +7,7 @@
 
 using namespace CSC2110;
 
+
 class Password
 {
    private:
@@ -18,7 +19,14 @@ class Password
       int getNumMatches(String* curr_word, String* word_guess);
 
    public:
-
+	   Password();
+	   ~Password();
+	   void addWord(String* word);
+	   void guess(int try_password, int num_matches);
+	   int getNumberOfPasswordsLeft();
+	   void displayViableWords();
+	   int bestGuess();
+	   String* getOriginalWord(int index);
 
 };
 

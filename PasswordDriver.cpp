@@ -1,8 +1,15 @@
 #include "Password.h"
 //fill in includes, don't forget namespaces
-
+#include<Keyboard.h>
+#include<ReadFile.h>
 #include <iostream>
 using namespace std;
+using namespace CSC2110;
+template <class T>
+void display(ListArray<T>* items)
+{
+	items->sz = 9;
+}
 
 void addWords(Password* fh)
 {
